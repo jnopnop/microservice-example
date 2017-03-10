@@ -1,0 +1,4 @@
+include 'employee'
+include 'shipment'
+
+rootProject.name = 'microservice-example'

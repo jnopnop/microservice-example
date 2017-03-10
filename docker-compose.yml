@@ -1,0 +1,27 @@
+employee:
+  extends:
+    file: docker-compose-common.yml
+    service: employee
+  links:
+    - mongodb-employee
+  environment:
+    SPRING_DATA_MONGODB_URI: mongodb://mongodb-employee/micros
+
+shipment:
+  extends:
+    file: docker-compose-common.yml
+    service: shipment
+  links:
+    - mongodb-shipment
+  environment:
+    SPRING_DATA_MONGODB_URI: mongodb://mongodb-shipment/micros
+
+mongodb-employee:
+  image: mongo
+  ports:
+    - 27017:27017
+
+mongodb-shipment:
+  image: mongo
+  ports:
+    - 27018:27017
