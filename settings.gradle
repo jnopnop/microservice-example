@@ -1,4 +1,4 @@
-include 'employee'
-include 'shipment'
+include 'ms_employee'
+include 'ms_shipment'
 
 rootProject.name = 'microservice-example'
