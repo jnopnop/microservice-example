@@ -6,6 +6,9 @@ ms_employee:
     - db_mongodb-employee
   environment:
     SPRING_DATA_MONGODB_URI: mongodb://db_mongodb-employee/micros
+    JPDA_ADDRESS: 8000
+    JPDA_TRANSPORT: dt_socket
+    JVM_OPTS: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000 -Djava.security.egd=file:/dev/./urandom
 
 shipment:
   extends:
@@ -15,6 +18,9 @@ shipment:
     - db_mongodb-shipment
   environment:
     SPRING_DATA_MONGODB_URI: mongodb://db_mongodb-shipment/micros
+    JPDA_ADDRESS: 8001
+    JPDA_TRANSPORT: dt_socket
+    JVM_OPTS: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8001 -Djava.security.egd=file:/dev/./urandom
 
 db_mongodb-employee:
   image: mongo

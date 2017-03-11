@@ -1,5 +1,6 @@
 #!/bin/sh
 
 gradle build
-docker-compose up --build -d
+docker-compose up --build
+#-d
 docker ps
