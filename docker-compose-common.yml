@@ -3,14 +3,15 @@ ms_employee:
   container_name: ms_employee
   restart: unless-stopped
   ports:
-    - "8081:8080"
-    - "8000:8000"
+    - "8080"
+  environment:
+    SPRING_DATA_MONGODB_URI: mongodb://db_mongodb-employee/micros
 
 ms_shipment:
   build: ./ms_shipment/
   container_name: ms_shipment
   restart: unless-stopped
   ports:
-    - "8082:8080"
-    - "8001:8001"
-
+    - "8080"
+  environment:
+    SPRING_DATA_MONGODB_URI: mongodb://db_mongodb-shipment/micros

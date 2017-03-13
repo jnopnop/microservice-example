@@ -4,6 +4,10 @@ ms_employee:
     service: ms_employee
   links:
     - db_mongodb-employee
+  ports:
+    - "8001:8001"
+  environment:
+    JVM_OPTS: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8001 -Djava.security.egd=file:/dev/./urandom
 
 ms_shipment:
   extends:
@@ -11,6 +15,10 @@ ms_shipment:
     service: ms_shipment
   links:
     - db_mongodb-shipment
+  ports:
+    - "8002:8002"
+  environment:
+    JVM_OPTS: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8002 -Djava.security.egd=file:/dev/./urandom
 
 db_mongodb-employee:
   image: mongo
