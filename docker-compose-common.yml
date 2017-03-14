@@ -1,3 +1,10 @@
+configserver:
+  build: ./configserver/
+  container_name: configserver
+  restart: unless-stopped
+  ports:
+    - "8888"
+
 ms_employee:
   build: ./ms_employee/
   container_name: ms_employee

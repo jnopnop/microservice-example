@@ -1,7 +1,7 @@
-package org.nop.mstst.web;
+package org.nop.ms.shipment.web;
 
-import org.nop.mstst.domain.Shipment;
-import org.nop.mstst.repository.ShipmentRepository;
+import org.nop.ms.shipment.domain.Shipment;
+import org.nop.ms.shipment.repository.ShipmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package org.nop.mstst;
+package org.nop.ms.employee;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ShipmentApplicationTests {
+public class EmployeeApplicationTests {
 
 	@Test
 	public void contextLoads() {

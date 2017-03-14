@@ -1,4 +1,4 @@
-package org.nop.mstst.domain;
+package org.nop.ms.shipment.domain;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,10 +8,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 @Getter
 @Setter
-public class Employee {
+public class Shipment {
 
     @Id
     private String id;
-    private String name;
-    private String email;
+    private String from;
+    private String to;
 }

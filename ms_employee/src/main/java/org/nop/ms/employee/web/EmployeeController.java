@@ -1,7 +1,7 @@
-package org.nop.mstst.web;
+package org.nop.ms.employee.web;
 
-import org.nop.mstst.domain.Employee;
-import org.nop.mstst.repository.EmployeeRepository;
+import org.nop.ms.employee.domain.Employee;
+import org.nop.ms.employee.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
