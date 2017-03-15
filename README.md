@@ -12,5 +12,5 @@ Example microservice based application based on following stack:
 ```
 #### stop
 ```bash
-./gradlew build composeDown
+./gradlew composeDown
 ```
