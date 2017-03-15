@@ -4,6 +4,9 @@ configserver:
   restart: unless-stopped
   ports:
     - "8888"
+#  environment:
+#    CFG_SRV_KEYPASS: changeme
+#    CFG_SRV_STOREPASS: letmein
 
 ms_employee:
   build: ./ms_employee/
