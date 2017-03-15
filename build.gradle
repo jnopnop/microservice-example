@@ -1,11 +1,11 @@
 buildscript {
     repositories {
         mavenCentral()
-        //jcenter()
+        jcenter()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
-        //classpath "com.avast.gradle:docker-compose-gradle-plugin:0.3.22"
+        classpath "com.avast.gradle:docker-compose-gradle-plugin:0.3.22"
     }
 }
 
@@ -14,10 +14,8 @@ task wrapper(type: Wrapper) {
 }
 
 apply plugin: 'idea'
-//apply plugin: 'application'
-//apply plugin: 'docker-compose'
+apply plugin: 'docker-compose'
 
-//dockerCompose.isRequiredBy(test)
 
 subprojects {
     apply plugin: 'java'

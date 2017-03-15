@@ -8,9 +8,9 @@ Example microservice based application based on following stack:
 
 #### run
 ```bash
-chmod +x run_all.sh && ./run_all.sh
+./gradlew build composeUp
 ```
 #### stop
 ```bash
-docker-compose stop
+./gradlew build composeDown
 ```
